@@ -46,6 +46,10 @@ public class PlayerServicesImplementation implements PlayerServices {
 		}
 		return player;
 	}
+	
+	public List<Player> seekPlayerByName(String nome) {
+		return null;
+	}
 
 
 }

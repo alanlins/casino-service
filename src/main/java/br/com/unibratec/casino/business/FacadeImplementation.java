@@ -34,5 +34,9 @@ public class FacadeImplementation implements Facade {
 		// TODO Auto-generated method stub
 		players.delete(id);
 	}
+	
+	public List<Player> seekPlayerByName(String nome) {
+		return this.players.seekPlayerByName(nome);
+	}
 
 }

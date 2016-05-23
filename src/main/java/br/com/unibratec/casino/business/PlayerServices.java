@@ -11,5 +11,6 @@ public interface PlayerServices {
 	public void delete(String email) throws PlayerException;
 	public Player seekPlayer(String email) throws PlayerException;
 	public void delete(Long id);
+	public List<Player> seekPlayerByName(String nome);
 	
 }
