@@ -38,7 +38,11 @@ public class PlayerController {
 		}
 	}
 	
-		
-		
+
+	@RequestMapping(value="/delete", method=RequestMethod.POST)
+	 public ResponseEntity<Boolean> delete(@RequestBody long id) {
+	  facade.delete(id);
+	  return new ResponseEntity<Boolean>(Boolean.TRUE, HttpStatus.OK);
+	 }
 	
 }
