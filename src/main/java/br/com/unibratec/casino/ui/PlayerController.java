@@ -38,7 +38,14 @@ public class PlayerController {
 		}
 	}
 	
-		
-		
+	@RequestMapping(value = "/add", method = RequestMethod.POST , produces=MediaType.APPLICATION_JSON_VALUE )
+	public ResponseEntity<?> salvar(@RequestBody Player player){
+		try {
+			facade.add(player);
+			return new ResponseEntity<Player>(player, HttpStatus.OK);
+		} catch (PlayerException e) {
+			return new ResponseEntity<Error>(new Error(1,e.getMessage()), HttpStatus.OK);
+		}
+	}	
 	
 }
