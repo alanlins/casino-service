@@ -46,6 +46,7 @@ public class PlayerController {
 		} catch (PlayerException e) {
 			return new ResponseEntity<Error>(new Error(1,e.getMessage()), HttpStatus.OK);
 		}
+	}
 	
 
 
