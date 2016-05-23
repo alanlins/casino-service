@@ -8,5 +8,8 @@ import br.com.unibratec.casino.exceptions.PlayerException;
 public interface PlayerServices {
 	public List<Player> listAll();
 	public void add(Player player) throws PlayerException;
+	public void delete(String email) throws PlayerException;
+	public Player seekPlayer(String email) throws PlayerException;
+	public void delete(Long id);
 	
 }

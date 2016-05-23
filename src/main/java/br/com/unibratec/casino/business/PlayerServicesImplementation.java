@@ -27,6 +27,25 @@ public class PlayerServicesImplementation implements PlayerServices {
 		if(playerWithSameEmail!=null && !playerWithSameEmail.equals(player))
 			throw new PlayerException(PlayerException.EMAIL_JA_CADASTRADO);
 	}
+	
+	public void delete(String email) throws PlayerException {
+		Player player = seekPlayer(email);
+		this.players.delete(player);
+	}
+	
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		players.delete(id);
+	}
+	
+	public Player seekPlayer(String email) throws PlayerException {
+		Player player = this.players.findByEmail(email);
+		if (player == null) {
+			throw new PlayerException(PlayerException.JOGADOR_NAO_EXISTE);
+		}
+		return player;
+	}
 
 
 }

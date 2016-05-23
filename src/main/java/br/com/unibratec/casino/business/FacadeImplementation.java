@@ -20,5 +20,19 @@ public class FacadeImplementation implements Facade {
 	public void add(Player player) throws PlayerException {
 		players.add(player);		
 	}
+	
+	public void deletePlayer(String email) throws PlayerException {
+		this.players.delete(email);
+	}
+	
+	public Player seekPlayer(String email) throws PlayerException {
+		return this.players.seekPlayer(email);
+	}
+	
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		players.delete(id);
+	}
 
 }
