@@ -24,7 +24,5 @@ public class Error implements Serializable {
 	public void setError(String error) {
 		this.error = error;
 	}
-
-	
 	
 }
